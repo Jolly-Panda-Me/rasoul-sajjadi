@@ -1,280 +1,93 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="dark">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
 <title>Rasoul Sajjadi — Level Designer</title>
-<meta name="description" content="Level Designer with 5+ years in games. Story-driven levels, blockouts in Unreal Engine 5, POIs and maps for multiplayer.">
-<meta property="og:title" content="Rasoul Sajjadi — Level Designer">
-<meta property="og:description" content="Level Designer with 5+ years in games. Story-driven levels, blockouts in Unreal Engine 5, POIs and maps for multiplayer.">
+<meta name="description" content="Level Designer with 5+ years in the game industry. Story-driven levels, blockouts in Unreal Engine 5, and maps and POIs for multiplayer games.">
+<meta name="author" content="Rasoul Sajjadi">
+<meta name="theme-color" content="#05030f">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<link rel="canonical" href="https://me.jollypanda.ir/bio/rasoul-sajjadi/">
+<link rel="alternate" hreflang="en" href="https://me.jollypanda.ir/bio/rasoul-sajjadi/">
+<link rel="alternate" hreflang="fa" href="https://me.jollypanda.ir/bio/rasoul-sajjadi/?lang=fa">
+<link rel="alternate" hreflang="x-default" href="https://me.jollypanda.ir/bio/rasoul-sajjadi/">
+
 <meta property="og:type" content="profile">
+<meta property="og:site_name" content="Rasoul Sajjadi">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fa_IR">
+<meta property="og:url" content="https://me.jollypanda.ir/bio/rasoul-sajjadi/">
+<meta property="og:title" content="Rasoul Sajjadi — Level Designer">
+<meta property="og:description" content="Level Designer with 5+ years in the game industry. Story-driven levels, blockouts in Unreal Engine 5, and maps and POIs for multiplayer games.">
+<meta property="og:image" content="https://me.jollypanda.ir/bio/rasoul-sajjadi/assets/img/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Rasoul Sajjadi, Level Designer — neon level blockout">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rasoul Sajjadi — Level Designer">
+<meta name="twitter:description" content="Level Designer with 5+ years in the game industry. Story-driven levels, blockouts in Unreal Engine 5, and maps and POIs for multiplayer games.">
+<meta name="twitter:image" content="https://me.jollypanda.ir/bio/rasoul-sajjadi/assets/img/og-cover.png">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="fetch" href="data/site.json" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
-<style>
-/* ---------- tokens ---------- */
-:root{
-  --void:#05030f;
-  --deep:#0b0820;
-  --panel:#120d2e;
-  --line:#2b1f5c;
-  --cyan:#2de2e6;
-  --magenta:#ff2fb9;
-  --lime:#9dfc4a;
-  --amber:#ffc857;
-  --ink:#e9e6ff;
-  --dim:#9a92c9;
+<link rel="stylesheet" href="assets/css/style.css">
 
-  --px:4px;
-  --maxw:1040px;
-
-  --f-pixel:"Press Start 2P", "Courier New", monospace;
-  --f-body:"VT323", "Courier New", monospace;
-  --f-fa:"Vazirmatn", "Tahoma", sans-serif;
-
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top, 0px);
-  padding-bottom:env(safe-area-inset-bottom, 0px);
+<script type="application/ld+json" id="ld-person">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Rasoul Sajjadi",
+  "jobTitle": "Level Designer",
+  "url": "https://me.jollypanda.ir/bio/rasoul-sajjadi/",
+  "email": "mailto:rasuol.sajjadi1379@gmail.com",
+  "sameAs": ["https://www.linkedin.com/in/rasuol-sajjadi/"]
 }
-*,*::before,*::after{box-sizing:inherit}
-html{scroll-behavior:smooth; scroll-padding-top:calc(72px + env(safe-area-inset-top, 0px));}
-body{
-  margin:0;
-  background:var(--void);
-  color:var(--ink);
-  font-family:var(--f-body);
-  font-size:21px;
-  line-height:1.55;
-  -webkit-font-smoothing:none;
-  image-rendering:pixelated;
-  overflow-x:hidden;
-}
-html[lang="fa"] body{font-family:var(--f-fa); font-size:17px; line-height:1.95; -webkit-font-smoothing:antialiased;}
-html[lang="fa"] .pixel{font-family:var(--f-fa); letter-spacing:0;}
-img{max-width:100%}
-
-/* ---------- pixel primitives ---------- */
-.pixel{font-family:var(--f-pixel); letter-spacing:.02em; line-height:1.7;}
-.frame{
-  position:relative;
-  background:var(--panel);
-  border:var(--px) solid var(--line);
-  box-shadow:0 var(--px) 0 0 #000, var(--px) 0 0 0 #000, 0 0 0 var(--px) #000 inset;
-}
-/* stepped "pixel" corners */
-.frame::before,.frame::after{
-  content:"";position:absolute;width:var(--px);height:var(--px);background:var(--void);
-}
-.frame::before{top:calc(var(--px)*-1);left:calc(var(--px)*-1)}
-.frame::after{bottom:calc(var(--px)*-1);right:calc(var(--px)*-1)}
-
-.scanlines{
-  position:fixed;inset:0;pointer-events:none;z-index:60;
-  background:repeating-linear-gradient(to bottom, rgba(0,0,0,.28) 0 2px, rgba(0,0,0,0) 2px 4px);
-  mix-blend-mode:multiply;opacity:.55;
-}
-.vignette{
-  position:fixed;inset:0;pointer-events:none;z-index:59;
-  background:radial-gradient(120% 90% at 50% 20%, transparent 40%, rgba(5,3,15,.85) 100%);
-}
-
-/* ---------- layout ---------- */
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
-section{padding:72px 0;position:relative}
-.sec-head{display:flex;align-items:center;gap:14px;margin:0 0 34px}
-.sec-head h2{font-family:var(--f-pixel);font-size:15px;margin:0;color:var(--cyan);text-shadow:0 0 12px rgba(45,226,230,.55)}
-html[lang="fa"] .sec-head h2{font-family:var(--f-fa);font-size:24px;font-weight:700}
-.sec-head .rule{flex:1;height:var(--px);background:
-  repeating-linear-gradient(to right, var(--line) 0 8px, transparent 8px 16px);}
-.sec-head .chip{width:14px;height:14px;background:var(--magenta);box-shadow:0 0 14px var(--magenta)}
-
-/* ---------- nav ---------- */
-header.bar{
-  position:sticky;top:env(safe-area-inset-top, 0px);z-index:50;
-  background:rgba(5,3,15,.88);
-  border-bottom:var(--px) solid var(--line);
-  backdrop-filter:blur(2px);
-}
-.bar-in{max-width:var(--maxw);margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px}
-.mark{font-family:var(--f-pixel);font-size:11px;color:var(--ink);text-decoration:none;white-space:nowrap}
-html[lang="fa"] .mark{font-family:var(--f-fa);font-size:18px;font-weight:700}
-.mark b{color:var(--lime)}
-nav.links{display:flex;gap:18px;margin-inline-start:auto;flex-wrap:wrap}
-nav.links a{
-  font-family:var(--f-pixel);font-size:9px;color:var(--dim);text-decoration:none;
-  padding:6px 2px;border-bottom:var(--px) solid transparent;
-}
-html[lang="fa"] nav.links a{font-family:var(--f-fa);font-size:15px}
-nav.links a:hover,nav.links a:focus-visible{color:var(--cyan);border-bottom-color:var(--cyan)}
-
-.lang{
-  display:flex;border:var(--px) solid var(--line);background:var(--deep);
-  margin-inline-start:4px;
-}
-.lang button{
-  font-family:var(--f-pixel);font-size:9px;
-  background:transparent;color:var(--dim);border:0;cursor:pointer;
-  padding:8px 10px;
-}
-.lang button[aria-pressed="true"]{background:var(--magenta);color:#0b0820;text-shadow:none}
-.lang button:hover{color:var(--ink)}
-
-/* ---------- hero ---------- */
-.hero{position:relative;min-height:min(86vh,720px);display:flex;align-items:center;padding:56px 0 80px;overflow:hidden}
-#stage{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0}
-.hero-grid{
-  position:absolute;inset:0;z-index:0;pointer-events:none;
-  background:
-    linear-gradient(to bottom, rgba(5,3,15,0) 55%, var(--void) 100%),
-    repeating-linear-gradient(to right, rgba(43,31,92,.5) 0 1px, transparent 1px 48px),
-    repeating-linear-gradient(to bottom, rgba(43,31,92,.5) 0 1px, transparent 1px 48px);
-}
-.hero-in{position:relative;z-index:2;max-width:640px}
-.eyebrow{
-  display:inline-block;font-family:var(--f-pixel);font-size:10px;color:var(--lime);
-  background:rgba(11,8,32,.8);border:var(--px) solid var(--lime);padding:8px 12px;margin-bottom:22px;
-  box-shadow:0 0 18px rgba(157,252,74,.35)
-}
-html[lang="fa"] .eyebrow{font-family:var(--f-fa);font-size:16px;font-weight:700}
-h1{
-  font-family:var(--f-pixel);font-size:clamp(20px,5.2vw,40px);line-height:1.35;margin:0 0 20px;
-  color:#fff;
-  text-shadow:
-    3px 0 0 var(--magenta),
-   -3px 0 0 var(--cyan),
-    0 0 26px rgba(255,47,185,.45);
-}
-html[lang="fa"] h1{font-family:var(--f-fa);font-weight:700;font-size:clamp(28px,7vw,52px);line-height:1.5}
-.hero p.lead{font-size:24px;color:var(--ink);max-width:56ch;margin:0 0 30px;text-shadow:0 0 18px rgba(45,226,230,.18)}
-html[lang="fa"] .hero p.lead{font-size:18px;max-width:62ch}
-.cta-row{display:flex;gap:14px;flex-wrap:wrap}
-.btn{
-  font-family:var(--f-pixel);font-size:10px;text-decoration:none;
-  padding:14px 18px;display:inline-block;
-  background:var(--cyan);color:#05030f;
-  border:var(--px) solid #05030f;
-  box-shadow:var(--px) var(--px) 0 0 var(--magenta);
-  transition:transform .08s steps(2), box-shadow .08s steps(2);
-}
-html[lang="fa"] .btn{font-family:var(--f-fa);font-size:16px;font-weight:700}
-.btn:hover,.btn:focus-visible{transform:translate(var(--px),var(--px));box-shadow:0 0 0 0 var(--magenta)}
-.btn.ghost{background:transparent;color:var(--cyan);border-color:var(--cyan);box-shadow:var(--px) var(--px) 0 0 var(--line)}
-
-/* ---------- highlights ---------- */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
-.card{padding:22px}
-.card .k{font-family:var(--f-pixel);font-size:9px;color:var(--amber);display:block;margin-bottom:12px}
-html[lang="fa"] .card .k{font-family:var(--f-fa);font-size:15px;font-weight:700}
-.card .v{color:var(--ink);font-size:20px}
-html[lang="fa"] .card .v{font-size:17px}
-.card .bar-dots{display:flex;gap:4px;margin-bottom:16px}
-.card .bar-dots i{width:8px;height:8px;background:var(--line)}
-.card .bar-dots i:first-child{background:var(--magenta)}
-.card .bar-dots i:nth-child(2){background:var(--cyan)}
-
-/* ---------- experience ---------- */
-.job{padding:26px;margin-bottom:26px}
-.job-top{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;margin-bottom:6px}
-.job h3{font-family:var(--f-pixel);font-size:13px;margin:0;color:#fff}
-html[lang="fa"] .job h3{font-family:var(--f-fa);font-size:21px;font-weight:700}
-.job .role{font-size:21px;color:var(--cyan)}
-html[lang="fa"] .job .role{font-size:17px}
-.job .meta{font-size:19px;color:var(--dim)}
-html[lang="fa"] .job .meta{font-size:15px}
-.job .summary{margin:14px 0 18px;color:var(--ink);font-size:21px}
-html[lang="fa"] .job .summary{font-size:17px}
-.job ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
-.job li{position:relative;padding-inline-start:26px;color:var(--dim);font-size:20px}
-html[lang="fa"] .job li{font-size:16px}
-.job li::before{
-  content:"";position:absolute;inset-inline-start:0;top:.55em;
-  width:10px;height:10px;background:var(--lime);box-shadow:0 0 10px rgba(157,252,74,.6)
-}
-.dates{
-  font-family:var(--f-pixel);font-size:9px;color:var(--magenta);
-  border:var(--px) solid var(--line);padding:7px 10px;margin-inline-start:auto;white-space:nowrap
-}
-html[lang="fa"] .dates{font-family:var(--f-fa);font-size:14px;direction:ltr}
-
-/* ---------- skills ---------- */
-.skill-group{padding:26px}
-.skill-group h3{font-family:var(--f-pixel);font-size:11px;color:var(--amber);margin:0 0 20px}
-html[lang="fa"] .skill-group h3{font-family:var(--f-fa);font-size:19px;font-weight:700}
-.tags{display:flex;flex-wrap:wrap;gap:10px}
-.tag{
-  font-size:19px;color:var(--ink);background:var(--deep);
-  border:var(--px) solid var(--line);padding:6px 12px;
-}
-html[lang="fa"] .tag{font-size:16px}
-.tag:hover{border-color:var(--cyan);color:var(--cyan)}
-
-/* ---------- contact ---------- */
-.contact{padding:34px;display:grid;gap:22px}
-.contact p.invite{margin:0;font-size:23px;max-width:52ch}
-html[lang="fa"] .contact p.invite{font-size:18px}
-.contact-links{display:flex;flex-wrap:wrap;gap:14px}
-.clink{
-  font-family:var(--f-pixel);font-size:10px;text-decoration:none;color:var(--ink);
-  border:var(--px) solid var(--line);padding:14px 16px;background:var(--deep);
-  display:inline-flex;align-items:center;gap:10px;
-  box-shadow:var(--px) var(--px) 0 0 #000;
-}
-html[lang="fa"] .clink{font-family:var(--f-fa);font-size:16px;direction:ltr}
-.clink:hover,.clink:focus-visible{color:var(--cyan);border-color:var(--cyan);transform:translate(var(--px),var(--px));box-shadow:none}
-.clink .sq{width:12px;height:12px;background:var(--magenta);flex:0 0 auto}
-.clink:nth-child(2) .sq{background:var(--cyan)}
-.clink:nth-child(3) .sq{background:var(--lime)}
-
-footer{border-top:var(--px) solid var(--line);padding:30px 0 46px;color:var(--dim);font-size:18px}
-html[lang="fa"] footer{font-size:15px}
-.foot-in{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;justify-content:space-between}
-.credit{display:inline-flex;align-items:center;gap:8px}
-.credit a{
-  color:var(--lime);text-decoration:none;
-  border-bottom:var(--px) solid transparent;
-  font-family:var(--f-pixel);font-size:10px;direction:ltr;
-}
-html[lang="fa"] .credit a{font-family:var(--f-fa);font-size:15px;font-weight:700}
-.credit a:hover,.credit a:focus-visible{border-bottom-color:var(--lime);text-shadow:0 0 12px rgba(157,252,74,.6)}
-
-:focus-visible{outline:var(--px) solid var(--amber);outline-offset:3px}
-
-@media (max-width:640px){
-  :root{--px:3px}
-  section{padding:52px 0}
-  nav.links{display:none}
-  .hero{min-height:auto;padding:40px 0 60px}
-}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .btn{transition:none}
-}
-@media (prefers-color-scheme:light){
-  :root:not([data-theme="light"]){} /* page is intentionally dark in both schemes */
-}
-</style>
+</script>
 </head>
 <body>
 <div class="scanlines" aria-hidden="true"></div>
 <div class="vignette" aria-hidden="true"></div>
 
+<a class="skip" href="#main">Skip to content</a>
+
 <header class="bar">
   <div class="bar-in">
-    <a class="mark pixel" href="#top"><b>&#9632;</b> <span data-i18n="name"></span></a>
-    <nav class="links">
+    <a class="mark pixel" href="#top"><b aria-hidden="true">&#9632;</b> <span data-i18n="name"></span></a>
+
+    <button class="menu-toggle pixel" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu">
+      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+    </button>
+
+    <nav class="links" id="nav" data-nav>
       <a href="#about" data-i18n="nav.about"></a>
       <a href="#experience" data-i18n="nav.experience"></a>
+      <a href="#projects" data-i18n="nav.projects" data-section-link="projects" hidden></a>
       <a href="#skills" data-i18n="nav.skills"></a>
+      <a href="#education" data-i18n="nav.education" data-section-link="education" hidden></a>
       <a href="#contact" data-i18n="nav.contact"></a>
     </nav>
+
     <div class="lang" role="group" aria-label="Language">
-      <button type="button" data-lang="en" aria-pressed="true">EN</button>
-      <button type="button" data-lang="fa" aria-pressed="false">فا</button>
+      <button type="button" data-lang="en" aria-pressed="true" lang="en">EN</button>
+      <button type="button" data-lang="fa" aria-pressed="false" lang="fa">فا</button>
     </div>
   </div>
 </header>
 
-<main id="top">
+<main id="main">
+  <div id="top"></div>
+
+  <p class="load-error frame" id="load-error" role="alert" hidden></p>
+
   <section class="hero">
     <canvas id="stage" aria-hidden="true"></canvas>
     <div class="hero-grid" aria-hidden="true"></div>
@@ -294,7 +107,15 @@ html[lang="fa"] .credit a{font-family:var(--f-fa);font-size:15px;font-weight:700
   <section id="about">
     <div class="wrap">
       <div class="sec-head"><span class="chip"></span><h2 data-i18n="nav.about"></h2><span class="rule"></span></div>
-      <div class="cards" id="highlights"></div>
+      <div class="about-grid">
+        <figure class="frame about-figure">
+          <img id="about-image" src="" alt="" width="640" height="800" loading="lazy" decoding="async">
+        </figure>
+        <div class="about-body">
+          <div id="about-text"></div>
+          <div class="cards" id="highlights"></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -305,10 +126,24 @@ html[lang="fa"] .credit a{font-family:var(--f-fa);font-size:15px;font-weight:700
     </div>
   </section>
 
+  <section id="projects" hidden>
+    <div class="wrap">
+      <div class="sec-head"><span class="chip"></span><h2 data-i18n="nav.projects"></h2><span class="rule"></span></div>
+      <div class="project-grid" id="projects-grid"></div>
+    </div>
+  </section>
+
   <section id="skills">
     <div class="wrap">
       <div class="sec-head"><span class="chip"></span><h2 data-i18n="nav.skills"></h2><span class="rule"></span></div>
-      <div id="skill-groups" class="cards" style="grid-template-columns:1fr"></div>
+      <div id="skill-groups" class="stack"></div>
+    </div>
+  </section>
+
+  <section id="education" hidden>
+    <div class="wrap">
+      <div class="sec-head"><span class="chip"></span><h2 data-i18n="nav.education"></h2><span class="rule"></span></div>
+      <div id="education-list" class="stack"></div>
     </div>
   </section>
 
@@ -317,10 +152,7 @@ html[lang="fa"] .credit a{font-family:var(--f-fa);font-size:15px;font-weight:700
       <div class="sec-head"><span class="chip"></span><h2 data-i18n="nav.contact"></h2><span class="rule"></span></div>
       <div class="frame contact">
         <p class="invite" data-i18n="contact.invite"></p>
-        <div class="contact-links">
-          <a class="clink" href="mailto:rasuol.sajjadi1379@gmail.com"><span class="sq"></span>rasuol.sajjadi1379@gmail.com</a>
-          <a class="clink" href="https://www.linkedin.com/in/rasuol-sajjadi/" target="_blank" rel="noopener"><span class="sq"></span>LinkedIn</a>
-        </div>
+        <div class="contact-links" id="contact-links"></div>
       </div>
     </div>
   </section>
@@ -330,297 +162,14 @@ html[lang="fa"] .credit a{font-family:var(--f-fa);font-size:15px;font-weight:700
   <div class="wrap foot-in">
     <span data-i18n="footer"></span>
     <span class="credit">
-      <span data-i18n="madeBy"></span>
-      <a href="https://jollypanda.ir" target="_blank" rel="noopener">Jolly Panda Studio</a>
+      <span data-i18n="labels.madeBy"></span>
+      <a id="credit-link" href="https://jollypanda.ir" target="_blank" rel="noopener">Jolly Panda Studio</a>
     </span>
   </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script>
-/* =========================================================
-   CONTENT — edit here; everything on the page reads from this
-   ========================================================= */
-const DATA = {
-  en:{
-    dir:"ltr",
-    title:"Rasoul Sajjadi — Level Designer",
-    name:"Rasoul Sajjadi",
-    tagline:"Level Designer",
-    heroStatement:"I'm a Level Designer with 5+ years of experience in the game industry, specializing in engaging, story-driven levels. I also build maps and POIs for multiplayer games.",
-    nav:{about:"About", experience:"Experience", skills:"Skills", contact:"Contact"},
-    cta:{work:"See experience", contact:"Get in touch"},
-    highlights:[
-      {k:"Focus", v:"Level design for video games"},
-      {k:"Team collaboration", v:"Clear communication & teamwork"},
-      {k:"Tools", v:"Unreal Engine 5, Unity, Blender, Figma, PureRef"}
-    ],
-    jobs:[
-      {
-        company:"Small Indie Company", role:"Level Designer",
-        location:"Las Vegas, USA (Remote)", dates:"Oct 2025 — Present",
-        summary:"Designing various POIs for an extraction shooter.",
-        points:[
-          "Designing POIs",
-          "Creating POI blockouts in Unreal Engine 5",
-          "Building combat and exploration spaces inside POIs",
-          "Collaborating with the environment artist"
-        ]
-      },
-      {
-        company:"Madvare Studio", role:"Level Designer",
-        location:"Tehran, Iran", dates:"Jun 2026 — Aug 2026",
-        summary:"Designing the final chapter of a first-person action horror game.",
-        points:[
-          "Level design: scenario writing, pacing, puzzle design, encounter zones",
-          "Creating the level blockout in Unreal Engine 5",
-          "Level testing",
-          "Collaborating with the environment artist"
-        ]
-      },
-      {
-        company:"Sourena Games Studio", role:"Level Designer",
-        location:"Tehran, Iran", dates:"Jan 2023 — Mar 2025",
-        summary:"Designing levels for multiplayer games, including a first-person shooter and a party game in the vein of Fall Guys.",
-        points:[
-          "Map design",
-          "Creating blockouts in Unity",
-          "Level testing",
-          "Collaborating with the environment artist"
-        ]
-      }
-    ],
-    skills:[
-      {
-        group:"Game design",
-        items:["Level Design","Level Blockout","Pacing & Flow","Level Layout Design","Exploration Design","POI Design","Player Guidance","Puzzle Design","Encounter Design (stealth & combat)","Level Design Documents","Playtesting & Iteration"]
-      }
-    ],
-    contact:{invite:"Open to level design work — tell me about the level you need built."},
-    footer:"Built with HTML, CSS and JavaScript.",
-    madeBy:"Made by"
-  },
-  fa:{
-    dir:"rtl",
-    title:"رسول سجادی — طراح مراحل",
-    name:"رسول سجادی",
-    tagline:"طراح مراحل",
-    heroStatement:"طراح مرحله با بیش از ۵ سال سابقه کار در صنعت بازی‌سازی؛ متخصص در طراحی و ساخت لول‌های درگیرکننده، سرگرم‌کننده و داستان‌محور و همچنین ساخت مپ و POI برای بازی‌های مولتی‌پلیر.",
-    nav:{about:"درباره من", experience:"سوابق کاری", skills:"مهارت‌ها", contact:"تماس"},
-    cta:{work:"دیدن سوابق", contact:"تماس با من"},
-    highlights:[
-      {k:"تمرکز", v:"طراحی مراحل برای بازی‌های مختلف"},
-      {k:"همکاری تیمی", v:"ارتباط قوی و کار تیمی"},
-      {k:"تسلط بر ابزار", v:"آنریل انجین ۵، یونیتی انجین، بلندر، فیگما، پیوررف"}
-    ],
-    jobs:[
-      {
-        company:"شرکت مستقل کوچک", role:"طراح مرحله",
-        location:"لاس‌وگاس، آمریکا (دورکاری)", dates:"Oct 2025 — Present",
-        summary:"طراحی POI‌های مختلف برای یک اکسترکشن شوتر.",
-        points:[
-          "طراحی POI",
-          "ساخت بلاک‌اوت POI در آنریل انجین ۵",
-          "طراحی محیط‌های مناسب مبارزه و اکسپلور در POI",
-          "تست کردن POI",
-          "همکاری با طراح محیط"
-        ]
-      },
-      {
-        company:"استودیو مدویر", role:"طراح مرحله",
-        location:"تهران، ایران", dates:"Jun 2026 — Aug 2026",
-        summary:"طراحی چپتر پایانی برای یک بازی اول‌شخص اکشن ترسناک.",
-        points:[
-          "طراحی لول شامل سناریو‌نویسی، طراحی پیسینگ، طراحی پازل و طراحی اینکانتر زون",
-          "ساخت بلاک‌اوت لول در آنریل انجین ۵",
-          "تست لول",
-          "همکاری با طراح محیط"
-        ]
-      },
-      {
-        company:"استودیو سورنا گیمز", role:"طراح مرحله",
-        location:"تهران، ایران", dates:"Jan 2023 — Mar 2025",
-        summary:"طراحی مراحل برای بازی‌های مولتی‌پلیر، شامل یک بازی فرست‌پرسن شوتر و یک پارتی‌گیم شبیه به فال گایز.",
-        points:[
-          "طراحی مپ",
-          "ساخت بلاک‌اوت در انجین یونیتی",
-          "تست لول",
-          "همکاری با طراح محیط"
-        ]
-      }
-    ],
-    skills:[
-      {
-        group:"طراحی بازی",
-        items:["طراحی مرحله","بلاک‌اوت مراحل","ریتم و جریان مرحله","طراحی چیدمان مرحله","طراحی اکتشاف","طراحی POI","هدایت بازیکن","طراحی پازل","طراحی رویارویی‌ها (مخفی‌کاری و مبارزه)","نوشتن داکیومنت لول دیزاین","تست و بهبود مرحله"]
-      }
-    ],
-    contact:{invite:"برای همکاری در طراحی مرحله در دسترسم — از لولی که می‌خواهید ساخته شود بگویید."},
-    footer:"ساخته‌شده با HTML، CSS و JavaScript.",
-    madeBy:"ساخته‌شده توسط"
-  }
-};
-
-/* ---------- i18n render ---------- */
-const $ = (s,r=document)=>r.querySelector(s);
-const $$ = (s,r=document)=>[...r.querySelectorAll(s)];
-const get = (obj,path)=>path.split(".").reduce((o,k)=>o&&o[k],obj);
-
-function render(lang){
-  const d = DATA[lang];
-  document.documentElement.lang = lang;
-  document.documentElement.dir = d.dir;
-  document.title = d.title;
-
-  $$("[data-i18n]").forEach(el=>{ el.textContent = get(d, el.dataset.i18n) ?? ""; });
-
-  $("#highlights").innerHTML = d.highlights.map(h=>`
-    <article class="frame card">
-      <div class="bar-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-      <span class="k">${h.k}</span>
-      <span class="v">${h.v}</span>
-    </article>`).join("");
-
-  $("#jobs").innerHTML = d.jobs.map(j=>`
-    <article class="frame job">
-      <div class="job-top">
-        <h3>${j.company}</h3>
-        <span class="role">${j.role}</span>
-        <span class="dates">${j.dates}</span>
-      </div>
-      <div class="meta">${j.location}</div>
-      <p class="summary">${j.summary}</p>
-      <ul>${j.points.map(p=>`<li>${p}</li>`).join("")}</ul>
-    </article>`).join("");
-
-  $("#skill-groups").innerHTML = d.skills.map(s=>`
-    <article class="frame skill-group">
-      <h3>${s.group}</h3>
-      <div class="tags">${s.items.map(i=>`<span class="tag">${i}</span>`).join("")}</div>
-    </article>`).join("");
-
-  $$(".lang button").forEach(b=>b.setAttribute("aria-pressed", String(b.dataset.lang===lang)));
-  try{ localStorage.setItem("lang", lang); }catch(e){}
-}
-
-$$(".lang button").forEach(b=>b.addEventListener("click",()=>render(b.dataset.lang)));
-
-let startLang = "en";
-try{
-  const saved = localStorage.getItem("lang");
-  if(saved === "en" || saved === "fa") startLang = saved;
-  else if((navigator.language||"").toLowerCase().startsWith("fa")) startLang = "fa";
-}catch(e){}
-render(startLang);
-
-/* =========================================================
-   3D HERO — a voxel level blockout that slowly turns
-   ========================================================= */
-(function(){
-  const canvas = document.getElementById("stage");
-  if(!canvas || typeof THREE === "undefined") return;
-
-  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const NEON = [0x2de2e6, 0xff2fb9, 0x9dfc4a, 0xffc857];
-
-  const scene = new THREE.Scene();
-  scene.fog = new THREE.FogExp2(0x05030f, 0.035);
-
-  const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 200);
-  camera.position.set(14, 12, 16);
-  camera.lookAt(0, 1.4, 0);
-
-  const renderer = new THREE.WebGLRenderer({canvas, antialias:false, alpha:true});
-  renderer.setClearColor(0x000000, 0);
-
-  const world = new THREE.Group();
-  scene.add(world);
-
-  // ground grid
-  const grid = new THREE.GridHelper(30, 15, 0x2b1f5c, 0x1a1340);
-  grid.position.y = -0.02;
-  world.add(grid);
-
-  // blockout volumes laid out like a small level: plaza, ramps, towers, cover
-  const layout = [
-    // [x, z, w, h, d]
-    [ 0, 0, 8, 0.5, 8],
-    [-5,-5, 3, 3.2, 3], [ 5,-5, 3, 4.6, 3],
-    [-5, 5, 3, 2.2, 3], [ 5, 5, 3, 3.6, 3],
-    [ 0,-7.5, 5, 1.2, 2], [ 0, 7.5, 5, 1.8, 2],
-    [-8, 0, 2, 5.4, 6], [ 8, 0, 2, 2.6, 6],
-    [-2,-2, 1.2, 1.2, 1.2], [ 2, 2, 1.2, 1.6, 1.2], [ 2.4,-1.6, 1, 0.9, 2.4],
-    [-9,-9, 2, 6.5, 2], [ 9, 9, 2, 5.2, 2]
-  ];
-
-  layout.forEach((b, i)=>{
-    const [x,z,w,h,d] = b;
-    const geo = new THREE.BoxGeometry(w, h, d);
-    const fill = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({
-      color: 0x120d2e, transparent:true, opacity:0.92
-    }));
-    fill.position.set(x, h/2, z);
-
-    const edges = new THREE.LineSegments(
-      new THREE.EdgesGeometry(geo),
-      new THREE.LineBasicMaterial({color: NEON[i % NEON.length], transparent:true, opacity:0.9})
-    );
-    edges.position.copy(fill.position);
-
-    world.add(fill, edges);
-  });
-
-  // player-path markers hovering over the blockout
-  const markers = [];
-  [[-5,-5],[0,0],[5,-5],[5,5],[0,7.5]].forEach((p,i)=>{
-    const m = new THREE.Mesh(
-      new THREE.BoxGeometry(0.55,0.55,0.55),
-      new THREE.MeshBasicMaterial({color: i===0 ? 0xffc857 : 0x9dfc4a})
-    );
-    m.position.set(p[0], 5.6 + i*0.35, p[1]);
-    m.userData.base = m.position.y;
-    m.userData.off = i * 0.8;
-    world.add(m);
-    markers.push(m);
-  });
-
-  let pointer = {x:0, y:0}, target = {x:0, y:0};
-  window.addEventListener("pointermove", e=>{
-    target.x = (e.clientX / window.innerWidth - 0.5) * 2;
-    target.y = (e.clientY / window.innerHeight - 0.5) * 2;
-  }, {passive:true});
-
-  function resize(){
-    const r = canvas.getBoundingClientRect();
-    const w = Math.max(1, r.width), h = Math.max(1, r.height);
-    renderer.setPixelRatio(1);            // chunky, deliberately low-res
-    renderer.setSize(w, h, false);
-    camera.aspect = w / h;
-    camera.updateProjectionMatrix();
-  }
-  window.addEventListener("resize", resize);
-  resize();
-
-  let t = 0;
-  function frame(){
-    requestAnimationFrame(frame);
-    if(!reduced) t += 0.006;
-
-    pointer.x += (target.x - pointer.x) * 0.05;
-    pointer.y += (target.y - pointer.y) * 0.05;
-
-    world.rotation.y = t + pointer.x * 0.28;
-    world.rotation.x = -0.02 + pointer.y * 0.06;
-
-    markers.forEach(m=>{
-      m.position.y = m.userData.base + Math.sin(t*4 + m.userData.off) * 0.28;
-      m.rotation.y = t * 2;
-    });
-
-    renderer.render(scene, camera);
-  }
-  frame();
-})();
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+<script src="assets/js/hero.js" defer></script>
 </body>
 </html>

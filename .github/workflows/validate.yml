@@ -1,0 +1,24 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check JSON files parse
+        run: |
+          for f in data/*.json site.webmanifest; do
+            python3 -m json.tool "$f" > /dev/null && echo "ok  $f"
+          done
+
+      - name: Check sitemap is well-formed XML
+        run: python3 -c "import xml.dom.minidom; xml.dom.minidom.parse('sitemap.xml'); print('ok  sitemap.xml')"
+
+      - name: Check referenced images exist
+        run: python3 .github/scripts/check_assets.py

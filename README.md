@@ -1,32 +1,29 @@
 # Rasoul Sajjadi — Level Designer
 
-A single-page static resume site. Pixel-art styling, dark neon palette, and a
-3D level-blockout hero rendered with three.js.
+Personal one-page résumé site for Rasoul Sajjadi, Level Designer.
+Static HTML, CSS and JavaScript — no build step, no framework.
 
-## Run it
+**Live:** https://me.jollypanda.ir/bio/rasoul-sajjadi/
 
-No build step. Open `index.html` in a browser, or serve the folder:
+## What's here
 
-    python3 -m http.server 8000
+- Bilingual: English by default, Persian with full RTL support, switchable in the top bar
+- Pixel-art styling over a dark neon palette
+- 3D hero: a rotating level blockout rendered with three.js, with a graceful fallback
+- Every string and image comes from `data/site.json` and `data/projects.json`, so the
+  content can be edited without touching the code
+- Responsive from small phones up, respects reduced-motion, has a print stylesheet
+- SEO: per-language titles and descriptions, canonical and hreflang links, Open Graph
+  and Twitter cards, Person JSON-LD, `sitemap.xml` and `robots.txt`
 
-## Edit the content
+## Editing content
 
-All copy lives in the `DATA` object at the top of the inline `<script>`,
-with `en` and `fa` side by side. Add a job by pushing an object to `jobs`
-in both locales; the page re-renders from that object on every language switch.
+Change the JSON in `data/`. Fields left empty are skipped, and a section with nothing
+in it stays hidden — filling in a blank field is all it takes to make that part of the
+page appear. Images are referenced by path in the same files; the current portrait and
+project covers are placeholders in `assets/img/`.
 
-## Languages
+## Credits
 
-English is the default. The EN / فا switch in the top bar flips
-`lang` and `dir` on `<html>`, swaps the font stack, and stores the choice in
-`localStorage`. A browser set to Persian opens in Persian.
-
-## Still to fill in
-
-Projects, education, the About paragraphs, and the Production / Technology
-skill categories were left blank in the content worksheet, so those sections
-are not on the page yet.
-
----
-
-Made by [Jolly Panda Studio](https://jollypanda.ir)
+Built by [Jolly Panda Studio](https://jollypanda.ir).
+Code is MIT licensed; the résumé content and artwork are not — see [LICENSE](LICENSE).

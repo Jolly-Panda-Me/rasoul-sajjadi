@@ -1,0 +1,13 @@
+{
+  "name": "Rasoul Sajjadi — Level Designer",
+  "short_name": "Rasoul Sajjadi",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#05030f",
+  "theme_color": "#05030f",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "assets/img/og-cover.png", "sizes": "1200x630", "type": "image/png" }
+  ]
+}

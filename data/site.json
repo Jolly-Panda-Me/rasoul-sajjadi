@@ -1,0 +1,274 @@
+{
+  "site": {
+    "baseUrl": "https://me.jollypanda.ir/bio/rasoul-sajjadi/",
+    "defaultLang": "en",
+    "languages": ["en", "fa"],
+    "ogImage": "assets/img/og-cover.png",
+    "themeColor": "#05030f"
+  },
+
+  "images": {
+    "about": {
+      "src": "assets/img/placeholder-portrait.svg",
+      "alt": {
+        "en": "Portrait placeholder — replace with a photo of Rasoul Sajjadi",
+        "fa": "جای‌نگهدار تصویر — با عکس رسول سجادی جایگزین شود"
+      }
+    }
+  },
+
+  "contact": {
+    "email": "rasuol.sajjadi1379@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/rasuol-sajjadi/",
+    "github": ""
+  },
+
+  "credit": {
+    "name": "Jolly Panda Studio",
+    "url": "https://jollypanda.ir"
+  },
+
+  "content": {
+    "en": {
+      "meta": {
+        "title": "Rasoul Sajjadi — Level Designer",
+        "description": "Level Designer with 5+ years in the game industry. Story-driven levels, blockouts in Unreal Engine 5, and maps and POIs for multiplayer games."
+      },
+      "name": "Rasoul Sajjadi",
+      "tagline": "Level Designer",
+      "heroStatement": "I'm a Level Designer with 5+ years of experience in the game industry, specializing in engaging, story-driven levels. I also build maps and POIs for multiplayer games.",
+
+      "nav": {
+        "about": "About",
+        "experience": "Experience",
+        "projects": "Projects",
+        "skills": "Skills",
+        "education": "Education",
+        "contact": "Contact"
+      },
+      "cta": {
+        "work": "See experience",
+        "contact": "Get in touch"
+      },
+      "labels": {
+        "role": "Role",
+        "genre": "Genre",
+        "platforms": "Platforms",
+        "technologies": "Technologies",
+        "viewProject": "Open project",
+        "email": "Email",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "madeBy": "Made by",
+        "loadError": "Content didn't load. Refresh the page, or check that data/site.json is being served."
+      },
+
+      "about": {
+        "paragraphs": ["", ""]
+      },
+
+      "highlights": [
+        { "k": "Focus", "v": "Level design for video games" },
+        { "k": "Team collaboration", "v": "Clear communication & teamwork" },
+        { "k": "Tools", "v": "Unreal Engine 5, Unity, Blender, Figma, PureRef" }
+      ],
+
+      "jobs": [
+        {
+          "company": "Small Indie Company",
+          "role": "Level Designer",
+          "location": "Las Vegas, USA (Remote)",
+          "dates": "Oct 2025 — Present",
+          "summary": "Designing various POIs for an extraction shooter.",
+          "points": [
+            "Designing POIs",
+            "Creating POI blockouts in Unreal Engine 5",
+            "Building combat and exploration spaces inside POIs",
+            "Testing POIs",
+            "Collaborating with the environment artist"
+          ]
+        },
+        {
+          "company": "Madvare Studio",
+          "role": "Level Designer",
+          "location": "Tehran, Iran",
+          "dates": "Jun 2026 — Aug 2026",
+          "summary": "Designing the final chapter of a first-person action horror game.",
+          "points": [
+            "Level design: scenario writing, pacing, puzzle design, encounter zones",
+            "Creating the level blockout in Unreal Engine 5",
+            "Level testing",
+            "Collaborating with the environment artist"
+          ]
+        },
+        {
+          "company": "Sourena Games Studio",
+          "role": "Level Designer",
+          "location": "Tehran, Iran",
+          "dates": "Jan 2023 — Mar 2025",
+          "summary": "Designing levels for multiplayer games, including a first-person shooter and a party game in the vein of Fall Guys.",
+          "points": [
+            "Map design",
+            "Creating blockouts in Unity",
+            "Level testing",
+            "Collaborating with the environment artist"
+          ]
+        }
+      ],
+
+      "skills": [
+        {
+          "group": "Game design",
+          "items": [
+            "Level Design",
+            "Level Blockout",
+            "Pacing & Flow",
+            "Level Layout Design",
+            "Exploration Design",
+            "POI Design",
+            "Player Guidance",
+            "Puzzle Design",
+            "Encounter Design (stealth & combat)",
+            "Level Design Documents",
+            "Playtesting & Iteration"
+          ]
+        },
+        { "group": "Production", "items": [] },
+        { "group": "Technology", "items": [] },
+        { "group": "", "items": [] }
+      ],
+
+      "education": [
+        { "institution": "", "degree": "", "dates": "", "note": "" },
+        { "institution": "", "degree": "", "dates": "", "note": "" }
+      ],
+
+      "contact": {
+        "invite": "Open to level design work — tell me about the level you need built."
+      },
+
+      "footer": "Built with HTML, CSS and JavaScript."
+    },
+
+    "fa": {
+      "meta": {
+        "title": "رسول سجادی — طراح مراحل",
+        "description": "طراح مرحله با بیش از ۵ سال سابقه در صنعت بازی‌سازی؛ لول‌های داستان‌محور، بلاک‌اوت در آنریل انجین ۵ و ساخت مپ و POI برای بازی‌های مولتی‌پلیر."
+      },
+      "name": "رسول سجادی",
+      "tagline": "طراح مراحل",
+      "heroStatement": "طراح مرحله با بیش از ۵ سال سابقه کار در صنعت بازی‌سازی؛ متخصص در طراحی و ساخت لول‌های درگیرکننده، سرگرم‌کننده و داستان‌محور و همچنین ساخت مپ و POI برای بازی‌های مولتی‌پلیر.",
+
+      "nav": {
+        "about": "درباره من",
+        "experience": "سوابق کاری",
+        "projects": "پروژه‌ها",
+        "skills": "مهارت‌ها",
+        "education": "تحصیلات",
+        "contact": "تماس"
+      },
+      "cta": {
+        "work": "دیدن سوابق",
+        "contact": "تماس با من"
+      },
+      "labels": {
+        "role": "نقش",
+        "genre": "ژانر",
+        "platforms": "پلتفرم‌ها",
+        "technologies": "تکنولوژی‌ها",
+        "viewProject": "مشاهده پروژه",
+        "email": "ایمیل",
+        "linkedin": "لینکدین",
+        "github": "گیت‌هاب",
+        "madeBy": "ساخته‌شده توسط",
+        "loadError": "محتوا بارگذاری نشد. صفحه را دوباره باز کنید یا بررسی کنید که فایل data/site.json سرو می‌شود."
+      },
+
+      "about": {
+        "paragraphs": ["", ""]
+      },
+
+      "highlights": [
+        { "k": "تمرکز", "v": "طراحی مراحل برای بازی‌های مختلف" },
+        { "k": "همکاری تیمی", "v": "ارتباط قوی و کار تیمی" },
+        { "k": "تسلط بر ابزار", "v": "آنریل انجین ۵، یونیتی انجین، بلندر، فیگما، پیوررف" }
+      ],
+
+      "jobs": [
+        {
+          "company": "شرکت مستقل کوچک",
+          "role": "طراح مرحله",
+          "location": "لاس‌وگاس، آمریکا (دورکاری)",
+          "dates": "Oct 2025 — Present",
+          "summary": "طراحی POI‌های مختلف برای یک اکسترکشن شوتر.",
+          "points": [
+            "طراحی POI",
+            "ساخت بلاک‌اوت POI در آنریل انجین ۵",
+            "طراحی محیط‌های مناسب مبارزه و اکسپلور در POI",
+            "تست کردن POI",
+            "همکاری با طراح محیط"
+          ]
+        },
+        {
+          "company": "استودیو مدویر",
+          "role": "طراح مرحله",
+          "location": "تهران، ایران",
+          "dates": "Jun 2026 — Aug 2026",
+          "summary": "طراحی چپتر پایانی برای یک بازی اول‌شخص اکشن ترسناک.",
+          "points": [
+            "طراحی لول شامل سناریو‌نویسی، طراحی پیسینگ، طراحی پازل و طراحی اینکانتر زون",
+            "ساخت بلاک‌اوت لول در آنریل انجین ۵",
+            "تست لول",
+            "همکاری با طراح محیط"
+          ]
+        },
+        {
+          "company": "استودیو سورنا گیمز",
+          "role": "طراح مرحله",
+          "location": "تهران، ایران",
+          "dates": "Jan 2023 — Mar 2025",
+          "summary": "طراحی مراحل برای بازی‌های مولتی‌پلیر، شامل یک بازی فرست‌پرسن شوتر و یک پارتی‌گیم شبیه به فال گایز.",
+          "points": [
+            "طراحی مپ",
+            "ساخت بلاک‌اوت در انجین یونیتی",
+            "تست لول",
+            "همکاری با طراح محیط"
+          ]
+        }
+      ],
+
+      "skills": [
+        {
+          "group": "طراحی بازی",
+          "items": [
+            "طراحی مرحله",
+            "بلاک‌اوت مراحل",
+            "ریتم و جریان مرحله",
+            "طراحی چیدمان مرحله",
+            "طراحی اکتشاف",
+            "طراحی POI",
+            "هدایت بازیکن",
+            "طراحی پازل",
+            "طراحی رویارویی‌ها (مخفی‌کاری و مبارزه)",
+            "نوشتن داکیومنت لول دیزاین",
+            "تست و بهبود مرحله"
+          ]
+        },
+        { "group": "پروداکشن", "items": [] },
+        { "group": "تکنولوژی", "items": [] },
+        { "group": "", "items": [] }
+      ],
+
+      "education": [
+        { "institution": "", "degree": "", "dates": "", "note": "" },
+        { "institution": "", "degree": "", "dates": "", "note": "" }
+      ],
+
+      "contact": {
+        "invite": "برای همکاری در طراحی مرحله در دسترسم — از لولی که می‌خواهید ساخته شود بگویید."
+      },
+
+      "footer": "ساخته‌شده با HTML، CSS و JavaScript."
+    }
+  }
+}
