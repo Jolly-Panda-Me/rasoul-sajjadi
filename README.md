@@ -1,29 +1,49 @@
-# Rasoul Sajjadi — Level Designer
+<div align="center">
 
-Personal one-page résumé site for Rasoul Sajjadi, Level Designer.
-Static HTML, CSS and JavaScript — no build step, no framework.
+# 🎮 Rasoul Sajjadi
 
-**Live:** https://me.jollypanda.ir/bio/rasoul-sajjadi/
+### Level Designer
 
-## What's here
+[![Live Site](https://img.shields.io/badge/Live-me.jollypanda.ir-2de2e6?style=for-the-badge)](https://me.jollypanda.ir/bio/rasoul-sajjadi/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rasuol-sajjadi/)
+[![Email](https://img.shields.io/badge/Email-Say%20Hi-ff2fb9?style=for-the-badge&logo=gmail&logoColor=white)](mailto:rasuol.sajjadi1379@gmail.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-9dfc4a?style=for-the-badge)](LICENSE)
 
-- Bilingual: English by default, Persian with full RTL support, switchable in the top bar
-- Pixel-art styling over a dark neon palette
-- 3D hero: a rotating level blockout rendered with three.js, with a graceful fallback
-- Every string and image comes from `data/site.json` and `data/projects.json`, so the
-  content can be edited without touching the code
-- Responsive from small phones up, respects reduced-motion, has a print stylesheet
-- SEO: per-language titles and descriptions, canonical and hreflang links, Open Graph
-  and Twitter cards, Person JSON-LD, `sitemap.xml` and `robots.txt`
+</div>
 
-## Editing content
+---
 
-Change the JSON in `data/`. Fields left empty are skipped, and a section with nothing
-in it stays hidden — filling in a blank field is all it takes to make that part of the
-page appear. Images are referenced by path in the same files; the current portrait and
-project covers are placeholders in `assets/img/`.
+Designing levels for shooters, horror, and multiplayer games — blockouts, pacing, encounters,
+and POIs, in Unreal Engine 5 and Unity. This repository is the source for my personal portfolio:
+a bilingual (English / فارسی), single-page site built to show the work rather than talk about it.
 
-## Credits
+## ✨ Highlights
 
-Built by [Jolly Panda Studio](https://jollypanda.ir).
-Code is MIT licensed; the résumé content and artwork are not — see [LICENSE](LICENSE).
+- 🌐 **Bilingual by default** — full English / Persian experience with proper RTL layout, not a
+  translated afterthought
+- 🕹️ **A designer's hero** — a rotating voxel level blockout in pixel-art neon instead of a stock photo
+- ⚡ **Genuinely lightweight** — vanilla HTML/CSS/JS, no framework, no build step
+- 🧩 **Content-driven** — every role, project, and skill lives in JSON, so the site updates without
+  touching a line of markup
+- ♿ **Built to be usable** — responsive down to small phones, reduced-motion support, real focus states
+
+## 🕹️ Selected Work
+
+Puzzle, merge, and multiplayer titles — see the [live site](https://me.jollypanda.ir/bio/rasoul-sajjadi/#projects)
+for the current lineup and details on each.
+
+## 📬 Get in Touch
+
+- **Email:** [rasuol.sajjadi1379@gmail.com](mailto:rasuol.sajjadi1379@gmail.com)
+- **LinkedIn:** [rasuol-sajjadi](https://www.linkedin.com/in/rasuol-sajjadi/)
+
+---
+
+<div align="center">
+<sub>Code in this repository is MIT licensed. Personal content — name, likeness, career history,
+and project details — is not licensed for reuse.</sub>
+</div>
+
+<div align="center">
+<sub>Built by <a href="https://jollypanda.ir">Jolly Panda Studio</a></sub>
+</div>
